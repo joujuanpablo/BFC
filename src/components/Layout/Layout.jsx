@@ -1,3 +1,5 @@
+// Wrapes the Header, Children, and Footer
+
 import React from 'react'
 import { Link } from 'gatsby'
 
