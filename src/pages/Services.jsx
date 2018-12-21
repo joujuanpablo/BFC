@@ -1,3 +1,10 @@
 import React from 'react'
+import Layout from '../components/Layout/Layout'
 
-export default () => <div>Services</div>
+// Try out compond components here as per ryan florence
+
+export default () => (
+    <Layout>
+        <div>Services</div>
+    </Layout>
+)

@@ -1,3 +1,8 @@
 import React from 'react'
+import Layout from '../components/Layout/Layout'
 
-export default () => <div>Careers</div>
+export default () => (
+    <Layout>
+        <div>Careers</div>
+    </Layout>
+)

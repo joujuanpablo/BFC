@@ -4,3 +4,24 @@
 // User lands at top of the page when navigating around the site
 
 // Will need state to handle highlighting current page
+
+import { Link } from 'gatsby'
+import React from 'react'
+import navStyles from './Nav.module.scss'
+
+class Nav extends React.Component {
+    render() {
+        return (
+            <nav className={navStyles.nav}>
+                <Link to="/" activeClassName={navStyles.active}>Home</Link>
+                <Link to="/Services" activeClassName={navStyles.active}>Services</Link>
+                <Link to="/ContactUs" activeClassName={navStyles.active}>Contact Us</Link>
+                <Link to="/AboutUs" activeClassName={navStyles.active}>About Us</Link>
+                <Link to="/Careers" activeClassName={navStyles.active}>Careers</Link>
+                <Link to="/Gallery" activeClassName={navStyles.active}>Gallery</Link>
+            </nav>
+        )
+    }
+}
+
+export default Nav;

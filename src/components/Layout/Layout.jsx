@@ -1,17 +1,15 @@
 // Wrapes the Header, Children, and Footer
 
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
+import Header from '../Header/Header'
+import Nav from '../Nav/Nav'
 
 export default ({ children }) => (
     <div className="page">
-        <header>
-            <Link to="/">Home</Link>
-            <Link to="/AboutUs">About Us</Link>
-            <Link to="/Careers">Careers</Link>
-            <Link to="/">Home</Link>
-            <Link to="/">Home</Link>
-        </header>
+        <Header>
+            <Nav />
+        </Header>
         { children }
         <footer>I AM A FOOTER</footer>
     </div>

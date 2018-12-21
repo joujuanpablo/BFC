@@ -1,3 +1,8 @@
 import React from 'react'
+import Layout from '../components/Layout/Layout'
 
-export default () => <div>Terms of Use</div>
+export default () => (
+    <Layout>
+        <div>Terms of Use</div>
+    </Layout>
+)

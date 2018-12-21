@@ -6,17 +6,17 @@
 }
 
 @mixin diagonal-gradient-up($bottom-left, $middle, $top-right) {
-background:$bottom-left; /* Old browsers */
-background: -moz-linear-gradient(45deg,$bottom-left 0%,$middle 44%,$top-right 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(45deg,$bottom-left 0%,$middle 44%,$top-right 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(45deg,$bottom-left 0%,$middle 44%,$top-right 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= $bottom-left, endColorstr= $top-right,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background:$bottom-left; /* Old browsers */
+    background: -moz-linear-gradient(45deg,$bottom-left 0%,$middle 44%,$top-right 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,$bottom-left 0%,$middle 44%,$top-right 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,$bottom-left 0%,$middle 44%,$top-right 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= $bottom-left, endColorstr= $top-right,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 @mixin diagonal-gradient-down($top-left, $middle, $bottom-right) {
-background:$top-left; /* Old browsers */
-background: -moz-linear-gradient(-45deg,$top-left 0%,$middle 44%,$bottom-right 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,$top-left 0%,$middle 44%,$bottom-right 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(-45deg,$top-left 0%,$middle 44%,$bottom-right 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= $top-left, endColorstr= $bottom-right,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background:$top-left; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,$top-left 0%,$middle 44%,$bottom-right 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,$top-left 0%,$middle 44%,$bottom-right 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(-45deg,$top-left 0%,$middle 44%,$bottom-right 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= $top-left, endColorstr= $bottom-right,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
