@@ -4,9 +4,8 @@ import React from "react";
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 import NavBrand from "../NavBrand/NavBrand";
-// import BurgerButton from "../BurgerButton/BurgerButton";
+import BurgerButton from "../BurgerButton/BurgerButton";
 import "../../styles/index.scss";
-import cx from 'classnames'
 
 class Layout extends React.Component {
   constructor(props) {
@@ -25,25 +24,11 @@ class Layout extends React.Component {
   }
 
   render() {
-    let className = cx({
-        'hamburger': true,
-        'hamburger--collapse': true,
-        'is-active': this.state.isNavMenuOpen,
-    });
-
     return (
       <div className="page">
         <Header>
           <NavBrand />
-          <button
-            onClick={this.handleMenuClick.bind(this)}
-            className={className}
-            type="button"
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner" />
-            </span>
-          </button>
+        <BurgerButton isNavMenuOpen={this.state.isNavMenuOpen} onClick={this.handleMenuClick.bind(this)} />
           <Nav />
         </Header>
         {this.props.children}
