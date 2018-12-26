@@ -8,12 +8,11 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import navStyles from './Nav.module.scss'
-
+// Need to make this responsive: hide on mobile, replace with burger menu (fontawesome), and show on click
 class Nav extends React.Component {
     render() {
         return (
             <nav className={navStyles.nav}>
-                <Link to="/" activeClassName={navStyles.active}>Home</Link>
                 <Link to="/Services" activeClassName={navStyles.active}>Services</Link>
                 <Link to="/ContactUs" activeClassName={navStyles.active}>Contact Us</Link>
                 <Link to="/AboutUs" activeClassName={navStyles.active}>About Us</Link>
