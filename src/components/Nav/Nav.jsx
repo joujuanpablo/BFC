@@ -19,32 +19,32 @@ class Nav extends React.Component {
     render() {
         return (
             <nav className={cx(navStyles.nav, navStyles.excludeMobile)}>
-                <Link to="/" activeClassName={navStyles.active} className={navStyles.link}>
+                <Link to="/" title="home page" activeClassName={navStyles.active} className={navStyles.link}>
                     <div className={navStyles.linkText}>
                         Home
                     </div>
                 </Link>
-                <Link to="/Services" activeClassName={navStyles.active} className={navStyles.link}>
+                <Link to="/Services" title="services page" activeClassName={navStyles.active} className={navStyles.link}>
                     <div className={navStyles.linkText}>
                         Services
                     </div>
                 </Link>
-                <Link to="/ContactUs" activeClassName={navStyles.active} className={navStyles.link}>
+                <Link to="/ContactUs" title="contact us page" activeClassName={navStyles.active} className={navStyles.link}>
                     <div className={navStyles.linkText}>
                         Contact Us
                     </div>
                 </Link>
-                <Link to="/AboutUs" activeClassName={navStyles.active} className={navStyles.link}>
+                <Link to="/AboutUs" title="about us page" activeClassName={navStyles.active} className={navStyles.link}>
                     <div className={navStyles.linkText}>
                         About Us
                     </div>
                 </Link>
-                <Link to="/Careers" activeClassName={navStyles.active} className={navStyles.link}>
+                <Link to="/Careers" title="careers page" activeClassName={navStyles.active} className={navStyles.link}>
                     <div className={navStyles.linkText}>
                         Careers
                     </div>
                 </Link>
-                <Link to="/Gallery" activeClassName={navStyles.active} className={navStyles.link}>
+                <Link to="/Gallery" title="gallery page" activeClassName={navStyles.active} className={navStyles.link}>
                     <div className={navStyles.linkText}>
                         Gallery
                     </div>

@@ -1,7 +1,8 @@
 @import './breakpoints';
 @import './gradients';
+@import './shadows';
 @import './variables';
 @import './spacing';
 @import './lib';
 
-@import '~hamburgers/dist/hamburgers.min.css';
+@import '~hamburgers/_sass/hamburgers/hamburgers.scss';

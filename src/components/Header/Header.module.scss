@@ -1,3 +1,5 @@
+@import '../../styles/shadows';
+
 .header {
     border-bottom: 2px solid white;
     position: fixed;
@@ -17,11 +19,13 @@
 .scrolled {
     height: 3em;
     background-color: black;
-    transition: all ease-in-out 0.3s
+    transition: all ease-in-out 0.3s;
+    @include bottomShadow(0.5);
 }
 
 .header.solid {
     background-color: grey;
+    @include bottomShadow(0.5);
 }
 
 .container {

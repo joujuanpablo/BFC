@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default () => (
-    <Link to="/">
+    <Link to="/" title="home page">
         <FontAwesomeIcon icon="igloo" />
     </Link>
 )

@@ -17,7 +17,7 @@ class BurgerButton extends React.Component {
             burgerButtonStyles.burgerButton, burgerButtonStyles.mobileOnly
         );
         return (
-            <button onClick={this.props.onClick} className={className} type="button">
+            <button onClick={this.props.onClick} className={className} type="navigation menu">
                 <span className="hamburger-box">
                     <span className="hamburger-inner" />
                 </span>

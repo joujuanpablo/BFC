@@ -1,6 +1,9 @@
 @import '../../styles/index.scss';
 
 .burgerButton.mobileOnly {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include breakpoint(xs) {
         display: none;
     }
