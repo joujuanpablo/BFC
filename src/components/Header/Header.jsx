@@ -5,6 +5,7 @@
 // Will need state to handle shrinking on scroll
 // Libraries
 import React from 'react'
+import cx from 'classnames'
 
 // Styles
 import headerStyles from './Header.module.scss'
@@ -14,7 +15,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className={headerStyles.header}>
-                <div className="container">
+                <div className={cx('container', headerStyles.container)}>
                     { this.props.children }
                 </div>
             </header>

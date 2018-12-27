@@ -4,15 +4,21 @@
 // User lands at top of the page when navigating around the site
 
 // Will need state to handle highlighting current page
-
-import { Link } from 'gatsby'
+// Libraries
 import React from 'react'
+import cx from 'classnames'
+
+// Components
+import { Link } from 'gatsby'
+
+// Styles
 import navStyles from './Nav.module.scss'
+
 // Need to make this responsive: hide on mobile, replace with burger menu (fontawesome), and show on click
 class Nav extends React.Component {
     render() {
         return (
-            <nav className={navStyles.nav}>
+            <nav className={cx(navStyles.nav, navStyles.excludeMobile)}>
                 <Link to="/" activeClassName={navStyles.active}>Home</Link>
                 <Link to="/Services" activeClassName={navStyles.active}>Services</Link>
                 <Link to="/ContactUs" activeClassName={navStyles.active}>Contact Us</Link>

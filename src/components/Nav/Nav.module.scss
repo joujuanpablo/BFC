@@ -1,5 +1,14 @@
+@import '../../styles/index.scss';
+
 .nav {
     border: 2px solid blue;
+    display: none;
+}
+.excludeMobile {
+    @include breakpoint(sm) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 .active {
     background-color: red;
