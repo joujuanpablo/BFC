@@ -12,6 +12,9 @@
 .link {
     padding: 0 0.5em;
     text-decoration: none;
+    &:last-child{
+        padding-right: 0;
+    }
 }
 .linkText {
     color: white;

@@ -8,6 +8,16 @@
     flex-direction: row;
     align-items: center;
     height: 4em;
+    a {
+        color: white;
+    }
+    transition: all ease-in-out 0.3s
+}
+
+.scrolled {
+    height: 3em;
+    background-color: black;
+    transition: all ease-in-out 0.3s
 }
 
 .container {
