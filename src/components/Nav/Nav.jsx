@@ -19,12 +19,36 @@ class Nav extends React.Component {
     render() {
         return (
             <nav className={cx(navStyles.nav, navStyles.excludeMobile)}>
-                <Link to="/" activeClassName={navStyles.active}>Home</Link>
-                <Link to="/Services" activeClassName={navStyles.active}>Services</Link>
-                <Link to="/ContactUs" activeClassName={navStyles.active}>Contact Us</Link>
-                <Link to="/AboutUs" activeClassName={navStyles.active}>About Us</Link>
-                <Link to="/Careers" activeClassName={navStyles.active}>Careers</Link>
-                <Link to="/Gallery" activeClassName={navStyles.active}>Gallery</Link>
+                <Link to="/" activeClassName={navStyles.active} className={navStyles.link}>
+                    <div className={navStyles.linkText}>
+                        Home
+                    </div>
+                </Link>
+                <Link to="/Services" activeClassName={navStyles.active} className={navStyles.link}>
+                    <div className={navStyles.linkText}>
+                        Services
+                    </div>
+                </Link>
+                <Link to="/ContactUs" activeClassName={navStyles.active} className={navStyles.link}>
+                    <div className={navStyles.linkText}>
+                        Contact Us
+                    </div>
+                </Link>
+                <Link to="/AboutUs" activeClassName={navStyles.active} className={navStyles.link}>
+                    <div className={navStyles.linkText}>
+                        About Us
+                    </div>
+                </Link>
+                <Link to="/Careers" activeClassName={navStyles.active} className={navStyles.link}>
+                    <div className={navStyles.linkText}>
+                        Careers
+                    </div>
+                </Link>
+                <Link to="/Gallery" activeClassName={navStyles.active} className={navStyles.link}>
+                    <div className={navStyles.linkText}>
+                        Gallery
+                    </div>
+                </Link>
             </nav>
         )
     }
