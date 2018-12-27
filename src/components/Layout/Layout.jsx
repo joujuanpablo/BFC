@@ -1,10 +1,14 @@
-// Wrapes the Header, Children, and Footer
-
+// Libraries
 import React from "react";
+
+// Components
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
 import NavBrand from "../NavBrand/NavBrand";
 import BurgerButton from "../BurgerButton/BurgerButton";
+import Footer from '../Footer/Footer';
+
+// Styles
 import "../../styles/index.scss";
 
 class Layout extends React.Component {
@@ -28,11 +32,14 @@ class Layout extends React.Component {
       <div className="page">
         <Header>
           <NavBrand />
-        <BurgerButton isNavMenuOpen={this.state.isNavMenuOpen} onClick={this.handleMenuClick.bind(this)} />
+            <BurgerButton
+                isNavMenuOpen={this.state.isNavMenuOpen}
+                onClick={this.handleMenuClick.bind(this)}
+            />
           <Nav />
         </Header>
         {this.props.children}
-        <footer>I AM A FOOTER</footer>
+        <Footer />
       </div>
     );
   }

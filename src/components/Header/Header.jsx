@@ -3,13 +3,16 @@
 // Sits overtop of page and is sticky
 
 // Will need state to handle shrinking on scroll
-
+// Libraries
 import React from 'react'
+
+// Styles
+import headerStyles from './Header.module.scss'
 
 class Header extends React.Component {
     render() {
         return (
-            <header>
+            <header className={headerStyles.header}>
                 { this.props.children }
             </header>
         )

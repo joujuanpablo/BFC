@@ -1,0 +1,10 @@
+@import '../../styles/index.scss';
+
+.hero {
+    height: 500px;
+    @include diagonal-gradient-up($dark-blue, $medium-blue, $light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
