@@ -5,8 +5,8 @@
         width: 100%;
     }
     @include breakpoint(xs) {
-        margin: 0 0;
-        width: 100%;
+        margin: 0 auto;
+        min-width: 495px;
     }
     @include breakpoint(sm) {
         min-width: 750px;

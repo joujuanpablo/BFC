@@ -10,6 +10,8 @@ import Footer from '../Footer/Footer';
 
 // Styles
 import "../../styles/index.scss";
+import headerStyles from '../Header/Header.module.scss'
+import navStyles from '../Nav/Nav.module.scss'
 
 class Layout extends React.Component {
   constructor(props) {
@@ -26,11 +28,27 @@ class Layout extends React.Component {
       },
     );
   }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScrollHeader);
+  }
+  componentWillUnmount() {
+    window.addEventListener('scroll', this.handleScrollHeader);
+  }
+  handleScrollHeader() {
+    let scrollTop = window.scrollY
+    if (scrollTop > 2) {
+       document.querySelector("header").classList.add(headerStyles.scrolled);
+       document.querySelectorAll(`.${navStyles.linkText}`).forEach(e => e.classList.add(navStyles.scrolled));
+      } else {
+        document.querySelector("header").classList.remove(headerStyles.scrolled);
+        document.querySelectorAll(`.${navStyles.linkText}`).forEach(e => e.classList.remove(navStyles.scrolled));
+    }
+}
 
   render() {
     return (
       <div className="page">
-        <Header>
+        <Header solid={this.props.solid}>
           <NavBrand />
             <BurgerButton
                 isNavMenuOpen={this.state.isNavMenuOpen}

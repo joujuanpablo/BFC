@@ -4,7 +4,7 @@
     display: none;
 }
 .excludeMobile {
-    @include breakpoint(sm) {
+    @include breakpoint(xs) {
         display: flex;
         flex-direction: row;
     }
@@ -20,6 +20,11 @@
     color: white;
     font-size: 0.8em;
     padding: 0.5em 0;
+    transition: all ease-in-out 0.3s
+}
+.scrolled {
+    padding: 0.3em 0;
+    transition: all ease-in-out 0.3s
 }
 .active {
     .linkText {

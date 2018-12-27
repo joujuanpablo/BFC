@@ -1,7 +1,7 @@
 @import '../../styles/index.scss';
 
 .burgerButton.mobileOnly {
-    @include breakpoint(sm) {
+    @include breakpoint(xs) {
         display: none;
     }
 }
