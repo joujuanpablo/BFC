@@ -14,41 +14,52 @@ import { Link } from 'gatsby'
 // Styles
 import navStyles from './Nav.module.scss'
 
-// Need to make this responsive: hide on mobile, replace with burger menu (fontawesome), and show on click
+const links = [
+    {
+        title: 'Home',
+        path: '/',
+        enabled: true
+    },
+    {
+        title: 'Services',
+        path: '/Services',
+        enabled: true
+    },
+    {
+        title: 'Contact Us',
+        path: '/ContactUs',
+        enabled: true
+    },
+    {
+        title: 'About Us',
+        path: '/AboutUs',
+        enabled: true
+    },
+    {
+        title: 'Careers',
+        path: '/Careers',
+        enabled: true
+    },
+    {
+        title: 'Gallery',
+        path: '/Gallery',
+        enabled: false
+    }
+]
 class Nav extends React.Component {
     render() {
         return (
             <nav className={cx(navStyles.nav, navStyles.excludeMobile)}>
-                <Link to="/" title="home page" activeClassName={navStyles.active} className={navStyles.link}>
-                    <div className={navStyles.linkText}>
-                        Home
-                    </div>
-                </Link>
-                <Link to="/Services" title="services page" activeClassName={navStyles.active} className={navStyles.link}>
-                    <div className={navStyles.linkText}>
-                        Services
-                    </div>
-                </Link>
-                <Link to="/ContactUs" title="contact us page" activeClassName={navStyles.active} className={navStyles.link}>
-                    <div className={navStyles.linkText}>
-                        Contact Us
-                    </div>
-                </Link>
-                <Link to="/AboutUs" title="about us page" activeClassName={navStyles.active} className={navStyles.link}>
-                    <div className={navStyles.linkText}>
-                        About Us
-                    </div>
-                </Link>
-                <Link to="/Careers" title="careers page" activeClassName={navStyles.active} className={navStyles.link}>
-                    <div className={navStyles.linkText}>
-                        Careers
-                    </div>
-                </Link>
-                <Link to="/Gallery" title="gallery page" activeClassName={navStyles.active} className={navStyles.link}>
-                    <div className={navStyles.linkText}>
-                        Gallery
-                    </div>
-                </Link>
+                {
+                    links.map((page) => {
+                        return page.enabled &&
+                         <Link to={page.path} title={`${page.title} page`} activeClassName={navStyles.active} className={navStyles.link}>
+                                <div className={navStyles.linkText}>
+                                    {page.title}
+                                </div>
+                            </Link>
+                        })
+                }
             </nav>
         )
     }
