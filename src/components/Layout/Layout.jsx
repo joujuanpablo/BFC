@@ -39,9 +39,11 @@ class Layout extends React.Component {
     if (scrollTop > 2) {
        document.querySelector("header").classList.add(headerStyles.scrolled);
        document.querySelectorAll(`.${navStyles.linkText}`).forEach(e => e.classList.add(navStyles.scrolled));
+       document.querySelectorAll(`.${navStyles.navMobile}`).forEach(e => e.classList.add(navStyles.scrolled));
       } else {
         document.querySelector("header").classList.remove(headerStyles.scrolled);
         document.querySelectorAll(`.${navStyles.linkText}`).forEach(e => e.classList.remove(navStyles.scrolled));
+        document.querySelectorAll(`.${navStyles.navMobile}`).forEach(e => e.classList.remove(navStyles.scrolled));
     }
 }
 
@@ -49,13 +51,14 @@ class Layout extends React.Component {
     return (
       <div className="page">
         <Header solid={this.props.solid}>
-          <NavBrand />
-            <BurgerButton
-                isNavMenuOpen={this.state.isNavMenuOpen}
-                onClick={this.handleMenuClick.bind(this)}
-            />
-          <Nav />
+          <NavBrand/>
+          <BurgerButton
+              isNavMenuOpen={this.state.isNavMenuOpen}
+              onClick={this.handleMenuClick.bind(this)}
+          />
+          <Nav viewport="desktop"/>
         </Header>
+        <Nav viewport="mobile"/>
         {this.props.children}
         <Footer />
       </div>

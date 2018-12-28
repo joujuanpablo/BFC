@@ -1,13 +1,32 @@
 @import '../../styles/index.scss';
 
-.nav {
+.navDesktop {
     display: none;
-}
-.excludeMobile {
     @include breakpoint(xs) {
         display: flex;
         flex-direction: row;
     }
+}
+.navDesktop .scrolled {
+    padding: 0.3em 0;
+    transition: $header-transition;
+}
+
+.navMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+    position: fixed;
+    top: $header-height + 0.5em;
+    left: 1%;
+    z-index: 10;
+    width: 98%;
+    transition: $header-transition;
+}
+.navMobile.scrolled {
+    top: $header-height-scrolled + 0.5em;
+    transition: $header-transition;
 }
 .link {
     padding: 0 0.5em;
@@ -20,10 +39,6 @@
     color: white;
     font-size: 0.8em;
     padding: 0.5em 0;
-    transition: all ease-in-out 0.3s
-}
-.scrolled {
-    padding: 0.3em 0;
     transition: all ease-in-out 0.3s
 }
 .active {

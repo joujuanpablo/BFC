@@ -1,4 +1,4 @@
-@import '../../styles/shadows';
+@import '../../styles/index.scss';
 
 .header {
     border-bottom: 2px solid white;
@@ -9,17 +9,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 4em;
+    height: $header-height;
+    transition: $header-transition;
     a {
         color: white;
     }
-    transition: all ease-in-out 0.3s
 }
 
 .scrolled {
-    height: 3em;
+    height: $header-height-scrolled;
     background-color: black;
-    transition: all ease-in-out 0.3s;
+    transition: $header-transition;
     @include bottomShadow(0.5);
 }
 
