@@ -29,11 +29,11 @@
         display: none;
     }
 }
-.navMobile.menu-open {
+.navMobile.menuOpen {
     padding: 1em;
     visibility: visible;
-    height: 80vh;
-    transition: h$header-transition;
+    height: 60vh;
+    transition: $header-transition;
 }
 .navMobile.scrolled {
     top: $header-height-scrolled + 0.5em;

@@ -48,9 +48,9 @@ const links = [
 ]
 class Nav extends React.Component {
     render() {
-        const { viewport, isNavMenuOpen } = this.props;
+        const { viewport, isNavMenuOpen, isScrolled } = this.props;
         return (
-            <nav className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile, isNavMenuOpen ? navStyles.menuOpen : null)}>
+            <nav className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile, isNavMenuOpen ? navStyles.menuOpen : null, isScrolled ? navStyles.scrolled : null)}>
                 {
                     links.map((page) => {
                         return page.enabled &&

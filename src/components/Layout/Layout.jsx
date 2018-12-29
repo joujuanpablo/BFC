@@ -22,6 +22,7 @@ class Layout extends React.Component {
     };
     this.closeMobileMenuOnResize = throttle(this.closeMobileMenuOnResize, 400);
     this.closeMobileMenuOnResize = this.closeMobileMenuOnResize.bind(this);
+    this.handleScrollHeader = this.handleScrollHeader.bind(this);
   }
 
   componentDidMount() {
@@ -46,6 +47,7 @@ class Layout extends React.Component {
       this.setState(
         {
           isNavMenuOpen: false,
+          isScrolled: false
         }
       );
     }
@@ -54,10 +56,12 @@ class Layout extends React.Component {
   handleScrollHeader() {
     let scrollTop = window.scrollY
     if (scrollTop > 2) {
-       document.querySelector("header").classList.add(headerStyles.scrolled);
+      this.setState({ isScrolled: true})
+       document.querySelector("header").classList.add(headerStyles.scrolled); //pass the scrolled state down as a prop instead
        document.querySelectorAll(`.${navStyles.linkText}`).forEach(e => e.classList.add(navStyles.scrolled));
        document.querySelectorAll(`.${navStyles.navMobile}`).forEach(e => e.classList.add(navStyles.scrolled));
       } else {
+        this.setState({ isScrolled: false})
         document.querySelector("header").classList.remove(headerStyles.scrolled);
         document.querySelectorAll(`.${navStyles.linkText}`).forEach(e => e.classList.remove(navStyles.scrolled));
         document.querySelectorAll(`.${navStyles.navMobile}`).forEach(e => e.classList.remove(navStyles.scrolled));
@@ -65,7 +69,7 @@ class Layout extends React.Component {
 }
 
   render() {
-    const { isNavMenuOpen } = this.state
+    const { isNavMenuOpen, isScrolled } = this.state
     return (
       <div className="page">
         <Header solid={this.props.solid}>
@@ -76,7 +80,7 @@ class Layout extends React.Component {
           />
           <Nav viewport="desktop"/>
         </Header>
-        <Nav viewport="mobile" isNavMenuOpen={isNavMenuOpen}/>
+        <Nav viewport="mobile" isNavMenuOpen={isNavMenuOpen} isScrolled={isScrolled}/>
         {this.props.children}
         <Footer />
       </div>
