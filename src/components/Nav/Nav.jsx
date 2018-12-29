@@ -48,13 +48,13 @@ const links = [
 ]
 class Nav extends React.Component {
     render() {
-        const { viewport } = this.props;
+        const { viewport, isNavMenuOpen } = this.props;
         return (
-            <nav className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile)}>
+            <nav className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile, isNavMenuOpen ? navStyles.menuOpen : null)}>
                 {
                     links.map((page) => {
                         return page.enabled &&
-                         <Link to={page.path} title={`${page.title} page`} activeClassName={navStyles.active} className={navStyles.link}>
+                         <Link to={page.path} title={`${page.title} page`} activeClassName={navStyles.active} className={navStyles.link} key={page.title}>
                                 <div className={navStyles.linkText}>
                                     {page.title}
                                 </div>

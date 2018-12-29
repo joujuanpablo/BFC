@@ -20,5 +20,6 @@ module.exports = {
         {
             resolve: `gatsby-plugin-sass`,
         },
+        `gatsby-plugin-lodash`,
     ]
 }
