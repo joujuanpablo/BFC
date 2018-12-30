@@ -11,8 +11,6 @@ import Footer from '../Footer/Footer';
 
 // Styles
 import '../../styles/index.scss';
-import headerStyles from '../Header/Header.module.scss'
-import navStyles from '../Nav/Nav.module.scss'
 
 class Layout extends React.Component {
   constructor(props) {
@@ -45,7 +43,7 @@ class Layout extends React.Component {
   }
 
   closeMobileMenu() {
-    this.setState({isNavMenuOpen: false})
+    this.setState({ isNavMenuOpen: false })
   }
 
   closeMobileMenuOnResize() {
@@ -63,14 +61,8 @@ class Layout extends React.Component {
     let scrollTop = window.scrollY
     if (scrollTop > 2) {
       this.setState({ isScrolled: true})
-       document.querySelector("header").classList.add(headerStyles.scrolled); //pass the scrolled state down as a prop instead
-       document.querySelectorAll(`.${navStyles.linkText}`).forEach(e => e.classList.add(navStyles.scrolled));
-       document.querySelectorAll(`.${navStyles.navMobile}`).forEach(e => e.classList.add(navStyles.scrolled));
       } else {
         this.setState({ isScrolled: false})
-        document.querySelector("header").classList.remove(headerStyles.scrolled);
-        document.querySelectorAll(`.${navStyles.linkText}`).forEach(e => e.classList.remove(navStyles.scrolled));
-        document.querySelectorAll(`.${navStyles.navMobile}`).forEach(e => e.classList.remove(navStyles.scrolled));
     }
 }
 
@@ -78,18 +70,18 @@ class Layout extends React.Component {
     const { isNavMenuOpen, isScrolled } = this.state
     return (
       <div className="page">
-        <Header solid={this.props.solid}>
+        <Header solid={this.props.solid} scrolled={isScrolled}>
           <NavBrand/>
           <BurgerButton
               isNavMenuOpen={isNavMenuOpen}
               onClick={this.handleMenuButtonClick}
           />
-          <Nav viewport="desktop"/>
+          <Nav viewport="desktop" scrolled={isScrolled}/>
         </Header>
         <Nav
           viewport="mobile"
           isNavMenuOpen={isNavMenuOpen}
-          isScrolled={isScrolled}
+          scrolled={isScrolled}
           closeMobileMenu={this.closeMobileMenu}
         />
         <div className="pageContent">

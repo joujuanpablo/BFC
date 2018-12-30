@@ -61,27 +61,22 @@ class Nav extends React.Component {
             var header = document.getElementsByTagName('header')[0];
             var mobileNav = document.getElementsByClassName(navStyles.navMobile)[0];
             if (mobileNav.contains(e.target) || header.contains(e.target)) {
-                console.log('inside - the target', e.target.classList);
                 return;
             } else {
-                console.log('outside - the target', e.target.classList)
                 closeMobileMenu();
             }
         }
       }
 
     render() {
-        const { viewport, isNavMenuOpen, isScrolled } = this.props;
+        const { viewport, isNavMenuOpen, scrolled } = this.props;
         return (
-            <nav
-                className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile, isNavMenuOpen ? navStyles.menuOpen : null, isScrolled ? navStyles.scrolled : null)}
-                ref={node => this.node = node}
-            >
+            <nav className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile, isNavMenuOpen ? navStyles.menuOpen : null, scrolled ? navStyles.scrolled : null)}>
                 {
                     links.map((page) => {
                         return page.enabled &&
                          <Link to={page.path} title={`${page.title} page`} activeClassName={navStyles.active} className={navStyles.link} key={page.title}>
-                                <div className={navStyles.linkText}>
+                                <div className={cx(navStyles.linkText, scrolled ? navStyles.scrolled : null)}>
                                     {page.title}
                                 </div>
                             </Link>

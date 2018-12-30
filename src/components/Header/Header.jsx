@@ -12,8 +12,9 @@ import headerStyles from './Header.module.scss'
 
 class Header extends React.Component {
     render() {
+        const { solid, scrolled } = this.props
         return (
-            <header className={cx(headerStyles.header, this.props.solid ? headerStyles.solid : null)}>
+            <header className={cx(headerStyles.header, solid ? headerStyles.solid : null, scrolled ? headerStyles.scrolled : null)}>
                 <div className={cx('container', headerStyles.container)}>
                     { this.props.children }
                 </div>
