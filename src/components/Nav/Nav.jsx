@@ -55,10 +55,15 @@ class Nav extends React.Component {
     }
 
     handleClick = (e) => {
-        if (this.node.contains(e.target) && this.props.isNavMenuOpen && this.props.viewport === 'mobile') {
-            return;
-        } else if (!this.node.contains(e.target) && this.props.isNavMenuOpen && this.props.closeMobileMenu && this.props.viewport === 'mobile') {
-            this.props.closeMobileMenu();
+        const { isNavMenuOpen, closeMobileMenu } = this.props;
+        if ( isNavMenuOpen && closeMobileMenu ) {
+            if (e.target.classList.contains(navStyles.navMobile) || e.target.classList.contains('burger-inner') || e.target.classList.contains('hamburger-box')) {
+                console.log('inside - the target', e.target.classList);
+                return;
+            } else {
+                console.log('outside - the target', e.target.classList)
+                closeMobileMenu();
+            }
         }
       }
 
