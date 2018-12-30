@@ -23,6 +23,7 @@ class Layout extends React.Component {
     this.closeMobileMenuOnResize = throttle(this.closeMobileMenuOnResize, 400);
     this.closeMobileMenuOnResize = this.closeMobileMenuOnResize.bind(this);
     this.handleScrollHeader = this.handleScrollHeader.bind(this);
+    this.closeMobileMenu = this.closeMobileMenu.bind(this);
   }
 
   componentDidMount() {
@@ -34,12 +35,16 @@ class Layout extends React.Component {
     window.removeEventListener('resize', this.closeMobileMenuOnResize);
   }
 
-  handleMenuClick() {
+  handleMenuButtonClick() {
     this.setState(
       {
         isNavMenuOpen: !this.state.isNavMenuOpen
       },
     );
+  }
+
+  closeMobileMenu() {
+    this.setState({isNavMenuOpen: false})
   }
 
   closeMobileMenuOnResize() {
@@ -76,12 +81,19 @@ class Layout extends React.Component {
           <NavBrand/>
           <BurgerButton
               isNavMenuOpen={isNavMenuOpen}
-              onClick={this.handleMenuClick.bind(this)}
+              onClick={this.handleMenuButtonClick.bind(this)}
           />
           <Nav viewport="desktop"/>
         </Header>
-        <Nav viewport="mobile" isNavMenuOpen={isNavMenuOpen} isScrolled={isScrolled}/>
-        {this.props.children}
+        <Nav
+          viewport="mobile"
+          isNavMenuOpen={isNavMenuOpen}
+          isScrolled={isScrolled}
+          closeMobileMenu={this.closeMobileMenu}
+        />
+        <div className="pageContent">
+          {this.props.children}
+        </div>
         <Footer />
       </div>
     );

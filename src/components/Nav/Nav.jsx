@@ -47,10 +47,30 @@ const links = [
     }
 ]
 class Nav extends React.Component {
+    componentDidMount() {
+        window.addEventListener('mousedown', this.handleClick, false );
+    }
+    componentWillUnmount() {
+        window.removeEventListener('mousedown', this.handleClick, false );
+    }
+
+    handleClick = (e) => {
+        if (this.node.contains(e.target) && this.props.isNavMenuOpen) {
+          console.log('handleClick... inside the nav do nothing');
+          return;
+        } else if (!this.node.contains(e.target) && this.props.isNavMenuOpen && this.props.closeMobileMenu) {
+            console.log('handleClick...outside nav please close', this.props);
+            this.props.closeMobileMenu();
+        }
+      }
+
     render() {
         const { viewport, isNavMenuOpen, isScrolled } = this.props;
         return (
-            <nav className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile, isNavMenuOpen ? navStyles.menuOpen : null, isScrolled ? navStyles.scrolled : null)}>
+            <nav
+                className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile, isNavMenuOpen ? navStyles.menuOpen : null, isScrolled ? navStyles.scrolled : null)}
+                ref={node => this.node = node}
+            >
                 {
                     links.map((page) => {
                         return page.enabled &&
