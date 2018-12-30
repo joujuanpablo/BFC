@@ -35,11 +35,7 @@ class Layout extends React.Component {
   }
 
   handleMenuButtonClick() {
-    this.setState(
-      {
-        isNavMenuOpen: !this.state.isNavMenuOpen
-      },
-    );
+    this.setState({ isNavMenuOpen: !this.state.isNavMenuOpen });
   }
 
   closeMobileMenu() {
@@ -48,12 +44,7 @@ class Layout extends React.Component {
 
   closeMobileMenuOnResize() {
     if (window.innerWidth > 515) {
-      this.setState(
-        {
-          isNavMenuOpen: false,
-          isScrolled: false
-        }
-      );
+      this.setState({ isNavMenuOpen: false });
     }
   }
 
