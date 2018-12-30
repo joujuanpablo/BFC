@@ -24,6 +24,7 @@ class Layout extends React.Component {
     this.closeMobileMenuOnResize = this.closeMobileMenuOnResize.bind(this);
     this.handleScrollHeader = this.handleScrollHeader.bind(this);
     this.closeMobileMenu = this.closeMobileMenu.bind(this);
+    this.handleMenuButtonClick = this.handleMenuButtonClick.bind(this);
   }
 
   componentDidMount() {
@@ -81,7 +82,7 @@ class Layout extends React.Component {
           <NavBrand/>
           <BurgerButton
               isNavMenuOpen={isNavMenuOpen}
-              onClick={this.handleMenuButtonClick.bind(this)}
+              onClick={this.handleMenuButtonClick}
           />
           <Nav viewport="desktop"/>
         </Header>

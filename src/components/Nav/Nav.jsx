@@ -55,11 +55,9 @@ class Nav extends React.Component {
     }
 
     handleClick = (e) => {
-        if (this.node.contains(e.target) && this.props.isNavMenuOpen) {
-          console.log('handleClick... inside the nav do nothing');
-          return;
-        } else if (!this.node.contains(e.target) && this.props.isNavMenuOpen && this.props.closeMobileMenu) {
-            console.log('handleClick...outside nav please close', this.props);
+        if (this.node.contains(e.target) && this.props.isNavMenuOpen && this.props.viewport === 'mobile') {
+            return;
+        } else if (!this.node.contains(e.target) && this.props.isNavMenuOpen && this.props.closeMobileMenu && this.props.viewport === 'mobile') {
             this.props.closeMobileMenu();
         }
       }
