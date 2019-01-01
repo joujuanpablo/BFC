@@ -19,13 +19,13 @@
 
 .scrolled {
     height: $header-height-scrolled;
-    background-color: black;
+    background-color: $dark-blue;
     transition: $header-transition;
     @include bottomShadow(0.5);
 }
 
 .header.solid {
-    background-color: grey;
+    background-color: $dark-blue;
     @include bottomShadow(0.5);
 }
 
