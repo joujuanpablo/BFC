@@ -35,16 +35,6 @@ class Nav extends React.Component {
         const { viewport, isNavMenuOpen, isScrolled } = this.props;
         return (
             <nav className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile, isNavMenuOpen ? navStyles.menuOpen : null, isScrolled ? navStyles.scrolled : null)}>
-                {/* {
-                    links.map((page) => {
-                        return page.enabled &&
-                            <Link to={page.path} title={`${page.title} page`} activeClassName={navStyles.active} className={navStyles.link} key={page.title}>
-                                <div className={cx(navStyles.linkText, scrolled ? navStyles.scrolled : null)}>
-                                    {page.title}
-                                </div>
-                            </Link>
-                        })
-                } */}
                 <NavLinks
                     activeClass={navStyles.active}
                     linkClass={navStyles.link}

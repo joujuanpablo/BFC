@@ -2,7 +2,7 @@
 
 .navDesktop {
     display: none;
-    @include breakpoint(xs) {
+    @include breakpoint($mobile-breakpoint) {
         display: flex;
         flex-direction: row;
     }
@@ -25,7 +25,7 @@
     z-index: 10;
     width: 96%;
     overflow: hidden;
-    @include breakpoint(xs) {
+    @include breakpoint($mobile-breakpoint) {
         display: none;
     }
 }

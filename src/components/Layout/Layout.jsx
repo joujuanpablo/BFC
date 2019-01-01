@@ -43,7 +43,7 @@ class Layout extends React.Component {
   }
 
   closeMobileMenuOnResize() {
-    if (window.innerWidth > 515) {
+    if (window.innerWidth > 767) { //mobile-breakpoint -1
       this.setState({ isNavMenuOpen: false });
     }
   }
