@@ -67,7 +67,7 @@ class Layout extends React.Component {
               isNavMenuOpen={isNavMenuOpen}
               onClick={this.handleMenuButtonClick}
           />
-          <Nav viewport="desktop" scrolled={isScrolled}/>
+          <Nav viewport="desktop" isScrolled={isScrolled}/>
         </Header>
         <Nav
           viewport="mobile"
