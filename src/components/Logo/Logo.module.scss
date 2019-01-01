@@ -1,0 +1,27 @@
+@import '../../styles/index.scss';
+
+.logoWrapper {
+    height: $logo-scale * 110px;
+    width: $logo-scale * 310px;
+    // border: 2px solid $teal;
+}
+svg {
+    circle {
+        stroke: $teal;
+        fill: none;
+    }
+    .logoText {
+        fill: $teal;
+    }
+    .logoTitle {
+        font-size: 75px;
+        font-family: sans-serif;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+    .logoSubtitle {
+        font-size: 30px;
+        font-family: sans-serif;
+        letter-spacing: 2px;
+    }
+}

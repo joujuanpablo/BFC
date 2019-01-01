@@ -1,0 +1,29 @@
+<svg height="110" width="310">
+    <style>
+       circle {
+            stroke: #000;
+            stroke-width: 8px;
+            fill: none;
+        }
+        .logo-title {
+            font-size: 80px;
+            font-family: sans-serif;
+            font-weight: bold;
+            letter-spacing: -2px;
+        }
+        .logo-subtitle {
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+    </style>
+    <g class="logo-circles" stroke-width="8" fill="none">
+      <circle cx="48" cy="64" r="40" stroke-width="8" fill="none"></circle>
+      <circle cx="60" cy="61" r="43" stroke-width="8" fill="none"></circle>
+      <circle cx="72" cy="58" r="46" stroke-width="8" fill="none"></circle>
+      <circle cx="84" cy="55" r="49" stroke-width="8" fill="none"></circle>
+    </g>
+    <g class="logo-text">
+      <text class="logo-title" x="145" y="75">BFC</text>
+      <text class="logo-subtitle" x="151" y="95">Technologies Inc.</text>
+    </g>
+</svg>
