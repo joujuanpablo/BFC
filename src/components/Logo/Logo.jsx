@@ -9,7 +9,8 @@ class Logo extends React.Component {
     return (
       <div className={logoStyles.logoWrapper}>
         <svg
-          viewBox="0 0 310 110" //how many units do I want to fit into my window horizontally and vertically respectively
+          viewBox="0 0 310 110"
+          preserveAspectRatio="xMidYMin slice"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >

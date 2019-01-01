@@ -1,0 +1,30 @@
+<svg
+    viewBox="0 0 310 110"
+    preserveAspectRatio="xMidYMin slice"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+>
+    <style>
+        .logo-title {
+            font-size: 75px;
+            font-family: sans-serif;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+        .logo-subtitle {
+            font-size: 30px;
+            font-family: sans-serif;
+            letter-spacing: 2px;
+        }
+    <style/>
+    <g class="logo-circles" stroke-width="9" fill="none" stroke="#6FFFE9">
+        <circle cx="48" cy="60" r="30" />
+        <circle cx="64" cy="55" r="30" />
+        <circle cx="80" cy="50" r="30" />
+    </g>
+    <g class="logoText" fill="#6FFFE9">
+        <text class="logo-title" x="136" y="80">
+            BFC
+        </text>
+    </g>
+ </svg>

@@ -1,15 +1,8 @@
 <svg>
-    <style>
-        circle {
-            stroke: #000;
-            stroke-width: 8px;
-            fill: none;
-        }
-    </style>
-    <g class="logo-circles" stroke-width="8" fill="none">
-      <circle cx="48" cy="64" r="40" stroke-width="8" fill="none"></circle>
-      <circle cx="60" cy="61" r="43" stroke-width="8" fill="none"></circle>
-      <circle cx="72" cy="58" r="46" stroke-width="8" fill="none"></circle>
-      <circle cx="84" cy="55" r="49" stroke-width="8" fill="none"></circle>
+    <g class="logo-circles" stroke-width="8" fill="none" stroke="#000">
+      <circle cx="48" cy="64" r="40" />
+      <circle cx="60" cy="61" r="43" />
+      <circle cx="72" cy="58" r="46" />
+      <circle cx="84" cy="55" r="49" />
     </g>
 </svg>

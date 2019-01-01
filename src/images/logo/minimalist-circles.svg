@@ -1,0 +1,14 @@
+  <svg
+    height="100px"
+    width="100px"
+    viewBox="0 0 110 110"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    preserveAspectRatio="xMidYMin slice"
+>
+    <g class="logo-circles" stroke-width="9" fill="none" stroke="#4B5320">
+        <circle cx="39" cy="60" r="30" />
+        <circle cx="55" cy="55" r="30" />
+        <circle cx="71" cy="50" r="30" />
+    </g>
+</svg>
