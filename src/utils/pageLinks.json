@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Home",
+        "path": "/",
+        "enabled": true
+    },
+    {
+        "title": "Services",
+        "path": "/Services",
+        "enabled": true
+    },
+    {
+        "title": "Contact Us",
+        "path": "/ContactUs",
+        "enabled": true
+    },
+    {
+        "title": "About Us",
+        "path": "/AboutUs",
+        "enabled": true
+    },
+    {
+        "title": "Careers",
+        "path": "/Careers",
+        "enabled": true
+    },
+    {
+        "title": "Gallery",
+        "path": "/Gallery",
+        "enabled": true
+    }
+]

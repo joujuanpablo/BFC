@@ -61,7 +61,7 @@ class Layout extends React.Component {
     const { isNavMenuOpen, isScrolled } = this.state
     return (
       <div className="page">
-        <Header solid={this.props.solid} scrolled={isScrolled}>
+        <Header solid={this.props.solid} isScrolled={isScrolled}>
           <NavBrand/>
           <BurgerButton
               isNavMenuOpen={isNavMenuOpen}
@@ -72,7 +72,7 @@ class Layout extends React.Component {
         <Nav
           viewport="mobile"
           isNavMenuOpen={isNavMenuOpen}
-          scrolled={isScrolled}
+          isScrolled={isScrolled}
           closeMobileMenu={this.closeMobileMenu}
         />
         <div className="pageContent">
