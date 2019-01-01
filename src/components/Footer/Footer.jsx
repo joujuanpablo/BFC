@@ -7,6 +7,9 @@
 import React from 'react'
 import cx from 'classnames'
 
+// Components
+import Logo from '../Logo/Logo'
+
 //Styles
 import footerStyles from './Footer.module.scss'
 
@@ -15,6 +18,8 @@ export default () => (
         <div className={cx("container")}>
             <div className={cx(footerStyles.panelsWrapper)}>
                 <div className={footerStyles.panel}>
+                    <Logo scale={1}/>
+                    <div className={footerStyles.subTitle}>Technologies Inc.</div>
                 </div>
                 <div className={footerStyles.panel}>
                 </div>

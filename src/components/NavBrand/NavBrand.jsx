@@ -8,6 +8,6 @@ import Logo from '../Logo/Logo'
 
 export default () => (
     <Link to="/" title="home page">
-        <Logo />
+        <Logo scale={0.8}/>
     </Link>
 )

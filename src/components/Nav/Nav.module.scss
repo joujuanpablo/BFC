@@ -49,13 +49,13 @@
     }
 }
 .linkText {
-    color: white;
+    color: $teal;
     font-size: 0.8em;
     padding: 0.5em 0;
     transition: all ease-in-out 0.3s
 }
 .active {
     .linkText {
-        border-bottom: 2px solid red;
+        border-bottom: 2px solid white;
     }
 }
