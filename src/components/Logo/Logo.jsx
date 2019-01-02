@@ -4,15 +4,13 @@ import React from "react";
 // Styles
 import logoStyles from "./Logo.module.scss";
 
-// TODO cleanup unused CSS
-
 const CirclesOnly = props => {
   let dynamicStyles = {
     height: `${props.scale * 55}px`,
     width: `${props.scale * 55}px`,
   }
   return(
-    <div className={logoStyles.logoWrapper} style={dynamicStyles}>
+    <div style={dynamicStyles}>
       <svg
         viewBox="0 0 55 55"
         preserveAspectRatio="xMidYMin slice"
@@ -41,14 +39,14 @@ const CirclesTitle = props => {
     letterSpacing: "-0.5px",
   }
   return(
-    <div className={logoStyles.logoWrapper} style={dynamicStyles}>
+    <div style={dynamicStyles}>
       <svg
       viewBox="0 0 155 55"
       preserveAspectRatio="xMidYMin slice"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        <g className="logoCircles" stroke-width="4.5" fill="none">
+        <g stroke-width="4.5" fill="none">
           <circle cx="24" cy="30" r="15" />
           <circle cx="32" cy="27.5" r="15" />
           <circle cx="40" cy="25" r="15" />
@@ -80,14 +78,14 @@ const CirclesTitleSubtitle = props => {
     letterSpacing: "1px",
   }
   return(
-    <div className={logoStyles.logoWrapper} style={dynamicStyles}>
+    <div style={dynamicStyles}>
       <svg
       viewBox="0 0 160 55"
       preserveAspectRatio="xMidYMin slice"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        <g className="logoCircles" stroke-width="4.5" fill="none">
+        <g stroke-width="4.5" fill="none">
           <circle cx="24" cy="30" r="15" />
           <circle cx="32" cy="27.5" r="15" />
           <circle cx="40" cy="25" r="15" />
