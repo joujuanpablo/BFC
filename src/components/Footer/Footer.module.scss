@@ -12,7 +12,7 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         .panel {
-            grid-column: span 6;
+            grid-column: span 12;
             border: 2px solid $medium-blue;
             // &:last-child {
             //     border: none;
@@ -24,6 +24,9 @@
                 color: $teal;
             }
             @include breakpoint(sm) {
+                grid-column: span 6;
+            }
+            @include breakpoint(md) {
                 grid-column: span 3;
             }
         }
