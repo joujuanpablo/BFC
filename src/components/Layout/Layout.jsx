@@ -12,6 +12,8 @@ import Footer from '../Footer/Footer';
 // Styles
 import '../../styles/index.scss';
 
+// TODO change viewport prop to enum
+
 class Layout extends React.Component {
   constructor(props) {
     super(props);
