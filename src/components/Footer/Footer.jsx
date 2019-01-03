@@ -9,15 +9,58 @@ import cx from 'classnames'
 
 // Components
 import Logo from '../Logo/Logo'
+import IconAndText from '../IconAndText/IconAndText'
 
 //Styles
 import footerStyles from './Footer.module.scss'
+
+// TODO move this content out to a centralized file
+let contactFields = [
+    {
+        title: 'Visit Us',
+        subtitle: 'put address here',
+        icon: {
+            name: 'instagram',
+            library: 'fab',
+            size: '2x'
+        }
+    },
+    {
+        title: 'Email Us',
+        subtitle: 'putaddresshere@bfc-we.omg',
+        icon: {
+            name: 'instagram',
+            library: 'fab',
+            size: '2x'
+        }
+    },
+    {
+        title: 'Call Us',
+        subtitle: '1234 567 8910',
+        icon: {
+            name: 'instagram',
+            library: 'fab',
+            size: '2x'
+        }
+    },
+]
 
 // TODO change version prop to enum
 export default () => (
     <footer className={cx(footerStyles.footer)}>
         <div className={cx("container")}>
             <div className={cx(footerStyles.panelsWrapper)}>
+                {
+                    contactFields.map(contactField => (
+                        <div className={footerStyles.contactPanel}>
+                            <IconAndText
+                                icon={contactField.icon}
+                                title={contactField.title}
+                                subtitle={contactField.subtitle} key={contactField.title}
+                            />
+                        </div>
+                    ))
+                }
                 <div className={footerStyles.panel}>
                     <Logo scale={1} version="CirclesTitleSubtitle"/>
                 </div>

@@ -1,7 +1,6 @@
 @import '../../styles/index.scss';
 
 .header {
-    border-bottom: 2px solid $teal;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -14,6 +13,7 @@
 }
 
 .scrolled {
+    border-bottom: 2px solid $medium-blue;
     height: $header-height-scrolled;
     background-color: $dark-blue;
     transition: $header-transition;

@@ -12,7 +12,7 @@ import Footer from '../Footer/Footer';
 // Styles
 import '../../styles/index.scss';
 
-// TODO change viewport prop to enum
+// TODO 1. change viewport prop to enum 2. import fontawesome icons and build library
 
 class Layout extends React.Component {
   constructor(props) {

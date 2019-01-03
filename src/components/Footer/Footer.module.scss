@@ -5,23 +5,19 @@
     background-color: $dark-blue;
     height: 300px;
     display: flex;
+    @include topShadow(0.3);
     .panelsWrapper {
         padding: 2em 0;
         height: 100%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        .contactPanel {
+            grid-column: span 4;
+            border: 2px solid $medium-blue;
+        }
         .panel {
             grid-column: span 12;
             border: 2px solid $medium-blue;
-            // &:last-child {
-            //     border: none;
-            // }
-            .logoWrapper {
-                border: 2px solid $teal;
-            }
-            .subTitle {
-                color: $teal;
-            }
             @include breakpoint(sm) {
                 grid-column: span 6;
             }
