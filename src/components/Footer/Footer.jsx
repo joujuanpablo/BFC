@@ -20,27 +20,27 @@ let contactFields = [
         title: 'Visit Us',
         subtitle: 'put address here',
         icon: {
-            name: 'instagram',
-            library: 'fab',
-            size: '2x'
+            name: 'map',
+            library: 'fa',
+            size: 'lg'
         }
     },
     {
         title: 'Email Us',
         subtitle: 'putaddresshere@bfc-we.omg',
         icon: {
-            name: 'instagram',
-            library: 'fab',
-            size: '2x'
+            name: 'envelope',
+            library: 'fa',
+            size: 'lg'
         }
     },
     {
         title: 'Call Us',
         subtitle: '1234 567 8910',
         icon: {
-            name: 'instagram',
-            library: 'fab',
-            size: '2x'
+            name: 'mobile',
+            library: 'fa',
+            size: 'lg'
         }
     },
 ]

@@ -1,5 +1,37 @@
 @import '../../styles/index.scss';
 
 .wrapper {
-    border: 2px solid red;
+    // border: 2px solid red;
+    color: $teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @include breakpoint(sm) {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .outer {
+        padding: 0.5em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .inner {
+        // padding: 0 1em;
+    }
+    .icon {
+        border-right: 2px solid white;
+        display: flex;
+        align-items: center;
+        padding-right: 1em;
+    }
+    .text {
+        padding-left: 1em;
+        .title {
+            font-size: 0.9em;
+        }
+        .subtitle {
+            font-size: 0.6em;
+        }
+    }
 }

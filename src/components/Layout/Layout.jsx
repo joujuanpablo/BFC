@@ -1,6 +1,9 @@
 // Libraries
 import React from 'react';
 import throttle from 'lodash/throttle';
+import { library } from '@fortawesome/fontawesome-svg-core';
+// import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faMobile, faMap } from '@fortawesome/free-solid-svg-icons';
 
 // Components
 import Header from '../Header/Header';
@@ -13,6 +16,7 @@ import Footer from '../Footer/Footer';
 import '../../styles/index.scss';
 
 // TODO 1. change viewport prop to enum 2. import fontawesome icons and build library
+library.add(faEnvelope, faMobile, faMap);
 
 class Layout extends React.Component {
   constructor(props) {
