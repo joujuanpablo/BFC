@@ -15,8 +15,11 @@
             grid-template-rows: 25% 75%;
         }
         .contactPanel {
-            grid-column: span 4;
+            grid-column: span 12;
             border: 2px solid $medium-blue;
+            @include breakpoint(xs) {
+                grid-column: span 4;
+            }
         }
         .panel {
             grid-column: span 12;

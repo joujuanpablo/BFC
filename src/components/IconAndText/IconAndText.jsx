@@ -14,7 +14,7 @@ export default (props) => (
     <div className={iconAndTextStyles.wrapper}>
         <div className={iconAndTextStyles.outer}>
             <div className={cx(iconAndTextStyles.icon, iconAndTextStyles.inner)}>
-                <FontAwesomeIcon icon={[props.icon.library, props.icon.name]} size={props.icon.size}/>
+                <FontAwesomeIcon icon={[props.icon.library, props.icon.name]}/>
             </div>
         </div>
         <div className={iconAndTextStyles.outer}>
