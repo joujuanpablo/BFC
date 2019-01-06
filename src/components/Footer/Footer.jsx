@@ -11,39 +11,13 @@ import cx from 'classnames'
 import Logo from '../Logo/Logo'
 import IconAndText from '../IconAndText/IconAndText'
 
-//Styles
+// Styles
 import footerStyles from './Footer.module.scss'
 
-// TODO move this content out to a centralized file
-let contactFields = [
-    {
-        title: 'Visit Us',
-        subtitle: 'put address here',
-        icon: {
-            name: 'map',
-            library: 'fa',
-            size: 'lg'
-        }
-    },
-    {
-        title: 'Email Us',
-        subtitle: 'putaddresshere@bfc-we.omg',
-        icon: {
-            name: 'envelope',
-            library: 'fa',
-            size: 'lg'
-        }
-    },
-    {
-        title: 'Call Us',
-        subtitle: '1234 567 8910',
-        icon: {
-            name: 'mobile',
-            library: 'fa',
-            size: 'lg'
-        }
-    },
-]
+// Content
+import content from '../../content/content.json'
+
+let contactFields = content.contactFields
 
 // TODO change version prop to enum
 export default () => (
@@ -52,11 +26,12 @@ export default () => (
             <div className={cx(footerStyles.panelsWrapper)}>
                 {
                     contactFields.map(contactField => (
-                        <div className={footerStyles.contactPanel}>
+                        <div className={footerStyles.contactPanel} key={contactField.title}>
                             <IconAndText
                                 icon={contactField.icon}
                                 title={contactField.title}
-                                subtitle={contactField.subtitle} key={contactField.title}
+                                link={contactField.link}
+                                subtitle={contactField.subtitle}
                             />
                         </div>
                     ))

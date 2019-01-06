@@ -11,9 +11,7 @@
         height: 100%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        @include breakpoint(sm) {
-            grid-template-rows: 25% 75%;
-        }
+        grid-auto-rows: min-content;
         .contactPanel {
             grid-column: span 12;
             border: 2px solid $medium-blue;

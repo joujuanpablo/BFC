@@ -1,12 +1,12 @@
 @import '../../styles/index.scss';
 
 .wrapper {
-    // border: 2px solid red;
     color: $teal;
     display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
     justify-content: flex-start;
+    padding: 4px;
     @include breakpoint(sm) {
         justify-content: center;
     }
@@ -19,9 +19,6 @@
             padding: 0.5em 0;
         }
     }
-    .inner {
-        // padding: 0 1em;
-    }
     .icon {
         display: none;
         align-items: center;
@@ -33,14 +30,18 @@
         }
     }
     .text {
+        display: flex;
+        flex-direction: column;
         @include breakpoint(sm) {
             padding-left: 1em;
         }
         .title {
             font-size: 0.9em;
         }
-        .subtitle {
-            font-size: 0.6em;
+        .link {
+            font-size: 0.7em;
+            text-decoration: none;
+            color: white;
         }
     }
 }

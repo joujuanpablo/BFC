@@ -8,8 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // Styles
 import iconAndTextStyles from './iconAndText.module.scss'
 
-// TODO make responsive
-
 export default (props) => (
     <div className={iconAndTextStyles.wrapper}>
         <div className={iconAndTextStyles.outer}>
@@ -20,7 +18,14 @@ export default (props) => (
         <div className={iconAndTextStyles.outer}>
             <div className={cx(iconAndTextStyles.text, iconAndTextStyles.inner)}>
                 <div className={iconAndTextStyles.title}>{props.title}</div>
-                <div className={iconAndTextStyles.subtitle}>{props.subtitle}</div>
+                <a
+                    className={iconAndTextStyles.link}
+                    href={props.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {props.subtitle}
+                </a>
             </div>
         </div>
     </div>

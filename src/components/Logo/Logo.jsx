@@ -17,7 +17,7 @@ const CirclesOnly = props => {
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        <g stroke-width="4.5" fill="none">
+        <g strokeWidth="4.5" fill="none">
           <circle cx="24" cy="30" r="15" />
           <circle cx="32" cy="27.5" r="15" />
           <circle cx="40" cy="25" r="15" />
@@ -46,7 +46,7 @@ const CirclesTitle = props => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        <g stroke-width="4.5" fill="none">
+        <g strokeWidth="4.5" fill="none">
           <circle cx="24" cy="30" r="15" />
           <circle cx="32" cy="27.5" r="15" />
           <circle cx="40" cy="25" r="15" />
@@ -85,7 +85,7 @@ const CirclesTitleSubtitle = props => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        <g stroke-width="4.5" fill="none">
+        <g strokeWidth="4.5" fill="none">
           <circle cx="24" cy="30" r="15" />
           <circle cx="32" cy="27.5" r="15" />
           <circle cx="40" cy="25" r="15" />

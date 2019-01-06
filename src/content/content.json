@@ -1,0 +1,31 @@
+{
+    "contactFields": [
+        {
+            "title": "Visit Us",
+            "subtitle": "155 Snow Blvd, Concord, ON L4K 4N9",
+            "link": "https://goo.gl/maps/k5QmS1dHbaq",
+            "icon": {
+                "name": "map",
+                "library": "fa"
+            }
+        },
+        {
+            "title": "Email Us",
+            "subtitle": "info@bfc-tech.com",
+            "link": "mailto:info@bfc-tech.com",
+            "icon": {
+                "name": "envelope",
+                "library": "fa"
+            }
+        },
+        {
+            "title": "Call Us",
+            "subtitle": "+1 (905) 761-0599",
+            "link": "tel:+19057610599",
+            "icon": {
+                "name": "mobile",
+                "library": "fa"
+            }
+        }
+    ]
+}

@@ -34,6 +34,7 @@
     visibility: visible;
     height: 60vh;
     transition: $header-transition;
+    overflow: scroll;
 }
 .navMobile.scrolled {
     top: $header-height-scrolled + 0.5em;
