@@ -18,6 +18,7 @@ import footerStyles from './Footer.module.scss'
 import content from '../../content/content.json'
 
 let contactFields = content.contactFields
+let aboutText = content.aboutText
 
 // TODO change version prop to enum
 export default () => (
@@ -36,14 +37,20 @@ export default () => (
                         </div>
                     ))
                 }
-                <div className={footerStyles.panel}>
+                <div className={footerStyles.midPanel}>
                     <Logo scale={1} version="CirclesTitleSubtitle"/>
+                    <div className={footerStyles.aboutText}>
+                        <p>{aboutText}</p>
+                    </div>
                 </div>
-                <div className={footerStyles.panel}>
+                <div className={footerStyles.midPanel}>
+                    <div>Navigation</div>
                 </div>
-                <div className={footerStyles.panel}>
+                <div className={footerStyles.midPanel}>
+                    <div>Services</div>
                 </div>
-                <div className={footerStyles.panel}>
+                <div className={footerStyles.fullPanel}>
+                    Full panel
                 </div>
             </div>
         </div>
