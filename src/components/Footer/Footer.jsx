@@ -37,16 +37,16 @@ export default () => (
                         </div>
                     ))
                 }
-                <div className={footerStyles.midPanel}>
+                <div className={footerStyles.aboutPanel}>
                     <Logo scale={1} version="CirclesTitleSubtitle"/>
                     <div className={footerStyles.aboutText}>
                         <p>{aboutText}</p>
                     </div>
                 </div>
-                <div className={footerStyles.midPanel}>
+                <div className={footerStyles.linksPanel}>
                     <div>Navigation</div>
                 </div>
-                <div className={footerStyles.midPanel}>
+                <div className={footerStyles.linksPanel}>
                     <div>Services</div>
                 </div>
                 <div className={footerStyles.fullPanel}>

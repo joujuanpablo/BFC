@@ -19,11 +19,21 @@
                 grid-column: span 4;
             }
         }
-        .midPanel {
+        .aboutPanel {
             grid-column: span 12;
             border: 2px solid $medium-blue;
             @include breakpoint(sm) {
                 grid-column: span 6;
+            }
+            @include breakpoint(md) {
+                grid-column: span 4;
+            }
+        }
+        .linksPanel {
+            grid-column: span 12;
+            border: 2px solid $medium-blue;
+            @include breakpoint(sm) {
+                grid-column: span 3;
             }
             @include breakpoint(md) {
                 grid-column: span 4;
