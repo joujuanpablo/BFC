@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Terms of Use",
+        "path": "/Terms",
+        "enabled": true
+    },
+    {
+        "title": "Privacy Policy",
+        "path": "/PrivacyPolicy",
+        "enabled": true
+    }
+]

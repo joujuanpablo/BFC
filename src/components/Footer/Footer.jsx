@@ -11,6 +11,7 @@ import cx from 'classnames'
 import Logo from '../Logo/Logo'
 import IconAndText from '../IconAndText/IconAndText'
 import NavLinks from '../NavLinks/NavLinks'
+import { Link } from 'gatsby'
 
 // Styles
 import footerStyles from './Footer.module.scss'
@@ -18,10 +19,14 @@ import footerStyles from './Footer.module.scss'
 // Content
 import content from '../../content/content.json'
 
+// Utils
+import regLinks from '../../utils/regulatoryLinks.json'
+
 let contactFields = content.contactFields
 let aboutText = content.aboutText
+let copyright = content.copyrightText
 
-// TODO change version prop to enum
+// TODO change version prop to enum, define hover behaviour for all links
 export default () => (
     <footer className={cx(footerStyles.footer)}>
         <div className={cx("container")}>
@@ -54,7 +59,12 @@ export default () => (
                     <div className={footerStyles.heading}>Services</div>
                 </div>
                 <div className={cx(footerStyles.fullPanel, footerStyles.panel)}>
-                    Full panel... privacy policy and terms of use
+                    <div className={cx(footerStyles.copyright)}>{copyright}</div>
+                    <div className={footerStyles.regLinks}>
+                        {regLinks.map(page => {
+                            return <Link to={page.path} key={page.title} title={`${page.title} page`}>{page.title}</Link>
+                        })}
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 @import '../../styles/index';
 
+// TODO refactor anchor tags (reduce duplication)
 .footer {
     border-top: 1px solid black;
     background-color: $dark-blue;
@@ -66,9 +67,31 @@
                 margin: 0;
             }
         }
+        .copyright {
+            color: white;
+            font-size: 0.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .regLinks {
+            a {
+                color: white;
+                font-size: 0.7em;
+                text-decoration: none;
+                padding: 0 8px;
+                &:first-child {
+                    border-right: 2px solid white;
+                }
+            }
+        }
         .fullPanel {
             border: 2px solid $medium-blue;
             grid-column: span 12;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
     }
 }
