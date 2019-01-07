@@ -12,6 +12,12 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-auto-rows: min-content;
+        .panel {
+            padding: 4px;
+            .heading {
+                color: $teal;
+            }
+        }
         .contactPanel {
             grid-column: span 12;
             border: 2px solid $medium-blue;
@@ -30,7 +36,7 @@
             }
         }
         .linksPanel {
-            grid-column: span 12;
+            grid-column: span 6;
             border: 2px solid $medium-blue;
             @include breakpoint(sm) {
                 grid-column: span 3;
@@ -38,12 +44,26 @@
             @include breakpoint(md) {
                 grid-column: span 4;
             }
+            .linksWrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: min-content;
+                a {
+                    grid-column: span 2;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 0.7em;
+                    @include breakpoint(xs) {
+                        grid-column: span 1;
+                    }
+                }
+            }
         }
         .aboutText {
-            padding: 4px 8px;
             p {
                 color: white;
                 font-size: 0.6em;
+                margin: 0;
             }
         }
         .fullPanel {

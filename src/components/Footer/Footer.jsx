@@ -10,6 +10,7 @@ import cx from 'classnames'
 // Components
 import Logo from '../Logo/Logo'
 import IconAndText from '../IconAndText/IconAndText'
+import NavLinks from '../NavLinks/NavLinks'
 
 // Styles
 import footerStyles from './Footer.module.scss'
@@ -27,7 +28,7 @@ export default () => (
             <div className={cx(footerStyles.panelsWrapper)}>
                 {
                     contactFields.map(contactField => (
-                        <div className={footerStyles.contactPanel} key={contactField.title}>
+                        <div className={cx(footerStyles.contactPanel, footerStyles.panel)} key={contactField.title}>
                             <IconAndText
                                 icon={contactField.icon}
                                 title={contactField.title}
@@ -37,20 +38,23 @@ export default () => (
                         </div>
                     ))
                 }
-                <div className={footerStyles.aboutPanel}>
+                <div className={cx(footerStyles.aboutPanel, footerStyles.panel)}>
                     <Logo scale={1} version="CirclesTitleSubtitle"/>
                     <div className={footerStyles.aboutText}>
                         <p>{aboutText}</p>
                     </div>
                 </div>
-                <div className={footerStyles.linksPanel}>
-                    <div>Navigation</div>
+                <div className={cx(footerStyles.linksPanel, footerStyles.panel)}>
+                    <div className={footerStyles.heading}>Navigation</div>
+                    <div className={footerStyles.linksWrapper}>
+                        <NavLinks />
+                    </div>
                 </div>
-                <div className={footerStyles.linksPanel}>
-                    <div>Services</div>
+                <div className={cx(footerStyles.linksPanel, footerStyles.panel)}>
+                    <div className={footerStyles.heading}>Services</div>
                 </div>
-                <div className={footerStyles.fullPanel}>
-                    Full panel
+                <div className={cx(footerStyles.fullPanel, footerStyles.panel)}>
+                    Full panel... privacy policy and terms of use
                 </div>
             </div>
         </div>
