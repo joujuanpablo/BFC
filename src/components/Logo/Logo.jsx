@@ -94,7 +94,7 @@ const CirclesTitleSubtitle = props => {
           <text style={titleStyle} x="62" y="29">
             BFC
           </text>
-          <text x="64" y="41" style={subtitleStyle}>
+          <text x="64" y="41" style={subtitleStyle} className={logoStyles.logoSubText}>
             Technologies Inc.
           </text>
         </g>
