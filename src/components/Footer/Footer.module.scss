@@ -7,28 +7,32 @@
     min-height: 300px;
     display: flex;
     @include topShadow(0.3);
+    a {
+        color: white;
+        text-decoration: none;
+    }
     .panelsWrapper {
         padding-bottom: 2em;
         height: 100%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-auto-rows: min-content;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
         .panel {
-            padding: 4px;
+            border: 2px solid $medium-blue;
             .heading {
                 color: $teal;
             }
         }
         .contactPanel {
             grid-column: span 12;
-            border: 2px solid $medium-blue;
             @include breakpoint(xs) {
                 grid-column: span 4;
             }
         }
         .aboutPanel {
             grid-column: span 12;
-            border: 2px solid $medium-blue;
             @include breakpoint(sm) {
                 grid-column: span 6;
             }
@@ -38,7 +42,6 @@
         }
         .linksPanel {
             grid-column: span 6;
-            border: 2px solid $medium-blue;
             @include breakpoint(sm) {
                 grid-column: span 3;
             }
@@ -49,10 +52,9 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-auto-rows: min-content;
+                padding: 5px 5px;
                 a {
                     grid-column: span 2;
-                    color: white;
-                    text-decoration: none;
                     font-size: 0.7em;
                     @include breakpoint(xs) {
                         grid-column: span 1;
@@ -76,9 +78,7 @@
         }
         .regLinks {
             a {
-                color: white;
                 font-size: 0.7em;
-                text-decoration: none;
                 padding: 0 8px;
                 &:first-child {
                     border-right: 2px solid white;
@@ -86,7 +86,6 @@
             }
         }
         .fullPanel {
-            border: 2px solid $medium-blue;
             grid-column: span 12;
             display: flex;
             flex-direction: column;

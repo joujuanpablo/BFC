@@ -6,21 +6,21 @@ import logoStyles from "./Logo.module.scss";
 
 const CirclesOnly = props => {
   let dynamicStyles = {
-    height: `${props.scale * 55}px`,
-    width: `${props.scale * 55}px`,
+    height: `${props.scale * 45}px`,
+    width: `${props.scale * 45}px`,
   }
   return(
     <div style={dynamicStyles}>
       <svg
-        viewBox="0 0 55 55"
+        viewBox="0 0 50 50"
         preserveAspectRatio="xMidYMin slice"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <g strokeWidth="4.5" fill="none">
-          <circle cx="24" cy="30" r="15" />
-          <circle cx="32" cy="27.5" r="15" />
-          <circle cx="40" cy="25" r="15" />
+          <circle cx="18" cy="25" r="15" />
+          <circle cx="26" cy="22.5" r="15" />
+          <circle cx="34" cy="20" r="15" />
         </g>
       </svg>
     </div>
@@ -29,7 +29,7 @@ const CirclesOnly = props => {
 
 const CirclesTitle = props => {
   let dynamicStyles = {
-    height: `${props.scale * 55}px`,
+    height: `${props.scale * 45}px`,
     width: `${props.scale * 155}px`,
   }
   let titleStyle = {
@@ -41,18 +41,18 @@ const CirclesTitle = props => {
   return(
     <div style={dynamicStyles}>
       <svg
-      viewBox="0 0 155 55"
+      viewBox="0 0 155 50"
       preserveAspectRatio="xMidYMin slice"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <g strokeWidth="4.5" fill="none">
-          <circle cx="24" cy="30" r="15" />
-          <circle cx="32" cy="27.5" r="15" />
-          <circle cx="40" cy="25" r="15" />
+          <circle cx="18" cy="25" r="15" />
+          <circle cx="26" cy="22.5" r="15" />
+          <circle cx="34" cy="20" r="15" />
         </g>
         <g className={logoStyles.logoText}>
-          <text x="64" y="40" style={titleStyle}>
+          <text x="64" y="35" style={titleStyle}>
             BFC
           </text>
         </g>
@@ -63,7 +63,7 @@ const CirclesTitle = props => {
 
 const CirclesTitleSubtitle = props => {
   let dynamicStyles = {
-    height: `${props.scale * 55}px`,
+    height: `${props.scale * 45}px`,
     width: `${props.scale * 160}px`,
   }
   let titleStyle = {
@@ -80,21 +80,21 @@ const CirclesTitleSubtitle = props => {
   return(
     <div style={dynamicStyles}>
       <svg
-      viewBox="0 0 160 55"
+      viewBox="0 0 160 50"
       preserveAspectRatio="xMidYMin slice"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <g strokeWidth="4.5" fill="none">
-          <circle cx="24" cy="30" r="15" />
-          <circle cx="32" cy="27.5" r="15" />
-          <circle cx="40" cy="25" r="15" />
+          <circle cx="18" cy="25" r="15" />
+          <circle cx="26" cy="22.5" r="15" />
+          <circle cx="34" cy="20" r="15" />
         </g>
         <g className={logoStyles.logoText}>
-          <text style={titleStyle} x="64" y="34">
+          <text style={titleStyle} x="62" y="29">
             BFC
           </text>
-          <text x="66" y="46" style={subtitleStyle}>
+          <text x="64" y="41" style={subtitleStyle}>
             Technologies Inc.
           </text>
         </g>
