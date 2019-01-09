@@ -88,6 +88,7 @@ export default () => (
                             )
                         })}
                     </div>
+                    <div className={footerStyles.credits}>Made by Cozy Cabin Consulting</div>
                 </div>
             </div>
         </div>
