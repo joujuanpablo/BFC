@@ -20,7 +20,9 @@ import footerStyles from './Footer.module.scss'
 import content from '../../content/content.json'
 
 // Utils
+import pageLinks from '../../utils/pageLinks.json'
 import regLinks from '../../utils/regulatoryLinks.json'
+import servicesLinks from '../../utils/servicesLinks.json'
 
 let contactFields = content.contactFields
 let aboutText = content.aboutText
@@ -51,12 +53,23 @@ export default () => (
                 </div>
                 <div className={cx(footerStyles.linksPanel, footerStyles.panel)}>
                     <div className={footerStyles.heading}>Navigation</div>
-                    <div className={footerStyles.linksWrapper}>
-                        <NavLinks linkClass={footerStyles.NavLink} linkTextClass={footerStyles.linkText}/>
+                    <div className={cx(footerStyles.navigationLinks, footerStyles.linksWrapper)}>
+                        <NavLinks
+                            links={pageLinks}
+                            linkClass={footerStyles.link}
+                            linkTextClass={footerStyles.linkText}
+                        />
                     </div>
                 </div>
                 <div className={cx(footerStyles.linksPanel, footerStyles.panel)}>
                     <div className={footerStyles.heading}>Services</div>
+                    <div className={cx(footerStyles.servicesLinks, footerStyles.linksWrapper)}>
+                        <NavLinks
+                            links={servicesLinks}
+                            linkClass={footerStyles.link}
+                            linkTextClass={footerStyles.linkText}
+                        />
+                    </div>
                 </div>
                 <div className={cx(footerStyles.fullPanel, footerStyles.panel)}>
                     <div className={cx(footerStyles.copyright)}>{copyright}</div>
@@ -64,7 +77,13 @@ export default () => (
                         {regLinks.map(page => {
                             return (
                                 <div className={footerStyles.regLinkWrapper}>
-                                    <Link to={page.path} key={page.title} title={`${page.title} page`}>{page.title}</Link>
+                                    <Link
+                                        to={page.path}
+                                        key={page.title}
+                                        title={`${page.title} page`}
+                                    >
+                                        {page.title}
+                                    </Link>
                                 </div>
                             )
                         })}

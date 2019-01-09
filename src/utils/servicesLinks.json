@@ -1,0 +1,22 @@
+[
+    {
+        "title": "BioTech & Pharma",
+        "path": "/Services/BioTech-Pharma",
+        "enabled": true
+    },
+    {
+        "title": "Food & Beverage",
+        "path": "/Food-Beverage",
+        "enabled": true
+    },
+    {
+        "title": "Consumer Products",
+        "path": "/ConsumerProducts",
+        "enabled": true
+    },
+    {
+        "title": "Nuclear",
+        "path": "/Nuclear",
+        "enabled": true
+    }
+]

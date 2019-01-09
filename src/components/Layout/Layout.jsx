@@ -7,7 +7,7 @@ import { faEnvelope, faMobile, faMap } from '@fortawesome/free-solid-svg-icons';
 
 // Components
 import Header from '../Header/Header';
-import Nav from '../Nav/Nav';
+import Nav from '../Nav/TopNav';
 import NavBrand from '../NavBrand/NavBrand';
 import BurgerButton from '../BurgerButton/BurgerButton';
 import Footer from '../Footer/Footer';
@@ -15,7 +15,6 @@ import Footer from '../Footer/Footer';
 // Styles
 import '../../styles/index.scss';
 
-// TODO 1. change viewport prop to enum 2. import fontawesome icons and build library
 library.add(faEnvelope, faMobile, faMap);
 
 class Layout extends React.Component {

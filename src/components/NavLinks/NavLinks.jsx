@@ -5,13 +5,8 @@ import cx from 'classnames'
 // Components
 import { Link } from 'gatsby'
 
-// Utils
-import pageLinks from '../../utils/pageLinks.json';
-
-const links = pageLinks;
-
 export default (props) => {
-    const { activeClass, linkClass, linkTextClass, scrolledClass, isScrolled } = props;
+    const { activeClass, linkClass, linkTextClass, scrolledClass, isScrolled, links } = props;
 
     return(
         <React.Fragment>

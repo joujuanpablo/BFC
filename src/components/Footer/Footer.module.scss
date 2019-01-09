@@ -39,7 +39,7 @@
         .aboutPanel {
             grid-column: span 12;
             @include breakpoint(sm) {
-                grid-column: span 6;
+                grid-column: span 4;
             }
             @include breakpoint(md) {
                 grid-column: span 4;
@@ -48,7 +48,7 @@
         .linksPanel {
             grid-column: span 6;
             @include breakpoint(sm) {
-                grid-column: span 3;
+                grid-column: span 4;
             }
             @include breakpoint(md) {
                 grid-column: span 4;
@@ -58,16 +58,27 @@
                 grid-template-columns: 1fr 1fr;
                 grid-auto-rows: min-content;
                 padding: 5px 5px;
-                .NavLink {
+                .link {
                     display: flex;
                     grid-column: span 2;
-                    @include breakpoint(xs) {
-                        grid-column: span 1;
-                    }
                     a {
                         display: flex;
                         .linkText {
                             font-size: 0.8em;
+                        }
+                    }
+                }
+                &.navigationLinks {
+                    .link {
+                        @include breakpoint(xs) {
+                            grid-column: span 1;
+                        }
+                    }
+                }
+                &.servicesLinks {
+                    .link {
+                        @include breakpoint(md) {
+                            grid-column: span 1;
                         }
                     }
                 }

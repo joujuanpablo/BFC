@@ -8,6 +8,9 @@ import NavLinks from '../NavLinks/NavLinks'
 // Styles
 import navStyles from './Nav.module.scss'
 
+// Utils
+import pageLinks from '../../utils/pageLinks.json';
+
 
 class Nav extends React.Component {
     componentDidMount() {
@@ -36,6 +39,7 @@ class Nav extends React.Component {
         return (
             <nav className={cx(viewport === "desktop" ? navStyles.navDesktop : navStyles.navMobile, isNavMenuOpen ? navStyles.menuOpen : null, isScrolled ? navStyles.scrolled : null)}>
                 <NavLinks
+                    links={pageLinks}
                     activeClass={navStyles.active}
                     linkClass={navStyles.link}
                     linkTextClass={navStyles.linkText}
