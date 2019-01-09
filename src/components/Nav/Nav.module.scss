@@ -1,5 +1,6 @@
 @import '../../styles/index.scss';
 
+// Needs some refactoring to make nesting look like the code
 .navDesktop {
     display: none;
     @include breakpoint($mobile-breakpoint) {
@@ -44,19 +45,25 @@
     padding: 0 5px;
     a {
         text-decoration: none;
+        color: $teal;
+        transition: all ease-in-out 0.1s;
+        &:hover {
+            color: white;
+            transition: all ease-in-out 0.1s
+        }
     }
+}
+.linkText {
+    font-size: 0.8em;
+    padding: 8px 0;
+    transition: $header-transition;
 }
 .navDesktop .link {
     &:last-child{
         padding-right: 0;
     }
 }
-.linkText {
-    color: $teal;
-    font-size: 0.8em;
-    padding: 8px 0;
-    transition: all ease-in-out 0.3s
-}
+
 .active {
     .linkText {
         border-bottom: 2px solid white;
