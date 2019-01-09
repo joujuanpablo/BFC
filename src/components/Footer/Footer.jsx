@@ -52,7 +52,7 @@ export default () => (
                 <div className={cx(footerStyles.linksPanel, footerStyles.panel)}>
                     <div className={footerStyles.heading}>Navigation</div>
                     <div className={footerStyles.linksWrapper}>
-                        <NavLinks />
+                        <NavLinks linkClass={footerStyles.NavLink} linkTextClass={footerStyles.linkText}/>
                     </div>
                 </div>
                 <div className={cx(footerStyles.linksPanel, footerStyles.panel)}>
@@ -62,7 +62,11 @@ export default () => (
                     <div className={cx(footerStyles.copyright)}>{copyright}</div>
                     <div className={footerStyles.regLinks}>
                         {regLinks.map(page => {
-                            return <Link to={page.path} key={page.title} title={`${page.title} page`}>{page.title}</Link>
+                            return (
+                                <div className={footerStyles.regLinkWrapper}>
+                                    <Link to={page.path} key={page.title} title={`${page.title} page`}>{page.title}</Link>
+                                </div>
+                            )
                         })}
                     </div>
                 </div>

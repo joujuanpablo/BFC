@@ -18,11 +18,13 @@ export default (props) => {
             {
             links.map((page) => {
                 return page.enabled &&
-                    <Link to={page.path} title={`${page.title} page`} activeClassName={activeClass} className={linkClass} key={page.title}>
-                        <div className={cx(linkTextClass, isScrolled ? scrolledClass : null)}>
-                            {page.title}
-                        </div>
-                    </Link>
+                    <div className={linkClass}>
+                        <Link to={page.path} title={`${page.title} page`} activeClassName={activeClass} key={page.title}>
+                            <div className={cx(linkTextClass, isScrolled ? scrolledClass : null)}>
+                                {page.title}
+                            </div>
+                        </Link>
+                    </div>
                 })
             }
         </React.Fragment>
